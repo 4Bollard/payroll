@@ -16,11 +16,10 @@ const collectEmployees = function() {
       moreEmployees= confirm('Do you want to add another employee?');
 }
 
-displayEmployees(employeesArray);
 return(employeesArray);
 }
 
-// Display the average salary
+
 const displayAverageSalary = function(employeesArray) {
   let totalSalary = 0
   for( let i=0; i<employeesArray.length; i++){
@@ -28,7 +27,7 @@ const displayAverageSalary = function(employeesArray) {
     totalSalary += obj.salary
   }
 
-  // TODO: Calculate and display the average salary
+  
   const averageSalary = totalSalary / employeesArray.length;
   console.log(averageSalary)
 }
@@ -38,6 +37,13 @@ const displayAverageSalary = function(employeesArray) {
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+
+
+const randomInt = Math.floor(Math.random() * employeesArray.length)
+const randomEmployee = employeesArray[randomInt]
+console.log(randomEmployee)
+console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName} for winning our random employee challange!`)
+
 }
 
 /*
